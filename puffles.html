@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Penguin Avatar Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+
+    <div style="display:none">
+
+      <img id="puffles-1-item-image" src="assets/15.png">
+      <img id="puffles-2-item-image" src="assets/empty.png">
+      <img id="puffles-3-item-image" src="assets/empty.png">
+      <img id="puffles-4-item-image" src="assets/empty.png">
+      <img id="puffles-5-item-image" src="assets/empty.png">
+      <img id="puffles-6-item-image" src="assets/empty.png">
+      <img id="puffles-7-item-image" src="assets/empty.png">
+      <img id="puffles-8-item-image" src="assets/empty.png">
+      <img id="puffles-9-item-image" src="assets/empty.png">
+      <img id="puffles-10-item-image" src="assets/empty.png">
+    
+    </div>
+    
+    <div class="puffles-playercard-generator is-loading" id="puffles-playercard">
+    
+      <div class="puffles-playercard-generator-loading-placeholder"></div>
+    
+      <div class="puffles-playercard-generator-wrapper">
+        <div class="puffles-playercard-generator-item-search">
+          <label for="puffles-item-search">Search item by name or ID:</label>
+          <input type="search" id="puffles-item-search" name="puffles-item-search">
+          <button onclick="pufflesSearchItem(false)">Search</button>
+          <button onclick="pufflesSearchItem(true)">Add</button>
+          <p id="puffles-item-search-result" class="puffles-playercard-item-search-result"></p>
+          <p id="puffles-item-search-error" class="puffles-playercard-item-search-error"></p>
+        </div>
+        <canvas id="puffles-canvas" class="puffles-playercard-canvas" width="600" height="600">
+          Your browser does not support this generator - sorry!
+        </canvas>
+        <br>
+        <button onclick="pufflesGenerateRandomPlayercard()" class="puffles-playercard-action">Random</a>
+        <button onclick="pufflesClearPlayercard()" class="puffles-playercard-action clear-action">Clear</a>
+        <button
+          id="puffles-playercard-download"
+          download="club-penguin-playercard"
+          href=""
+          class="puffles-playercard-generator-download-button"
+        >
+          Download
+        </button>
+      </div>
+    
+      <div class="puffles-playercard-generator-items">
+
+        <div>
+          <b>Color</b>
+          <br>
+          <select id="puffles-1-item" onchange="pufflesUpdateItem(1)" size="4"></select>
+        </div>
+        <div>
+          <b>Head Item</b>
+          <br>
+          <select id="puffles-2-item" onchange="pufflesUpdateItem(2)" size="4"></select>
+        </div>
+        <div>
+          <b>Face Item</b>
+          <br>
+          <select id="puffles-3-item" onchange="pufflesUpdateItem(3)" size="4"></select>
+        </div>
+        <div>
+          <b>Neck Item</b>
+          <br>
+          <select id="puffles-4-item" onchange="pufflesUpdateItem(4)" size="4"></select>
+        </div>
+        <div>
+          <b>Body Item</b>
+          <br>
+          <select id="puffles-5-item" onchange="pufflesUpdateItem(5)" size="4"></select>
+        </div>
+        <div>
+          <b>Hand Item</b>
+          <br>
+          <select id="puffles-6-item" onchange="pufflesUpdateItem(6)" size="4"></select>
+        </div>
+        <div>
+          <b>Feet Item</b>
+          <br>
+          <select id="puffles-7-item" onchange="pufflesUpdateItem(7)" size="4"></select>
+        </div>
+        <div>
+          <b>Pin</b>
+          <br>
+          <select id="puffles-8-item" onchange="pufflesUpdateItem(8)" size="4"></select>
+        </div>
+        <div>
+          <b>Background</b>
+          <br>
+          <select id="puffles-9-item" onchange="pufflesUpdateItem(9)" size="4"></select>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align: center;">This generator is a reworked version of Aurorum's <b>Puffles Playercard Generator</b>, available on <b>clubpenguinmountains.com</b>.</p>
+
+    <script src="items.js"></script>
+    <script src="scripts.js"></script>
+
+  </body>
+
+</html>
